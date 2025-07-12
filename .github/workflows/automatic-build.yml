@@ -11,6 +11,11 @@ on:
     paths-ignore:
       - 'dist/**'
 
+# Permissions nécessaires pour pousser des commits
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   build-and-update:
     runs-on: ubuntu-latest
