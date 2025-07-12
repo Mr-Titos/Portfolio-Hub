@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:clean": "rm -rf dist && npm run build",
+    "test:build": "bash scripts/test-build.sh",
+    "test:build:win": "powershell -ExecutionPolicy Bypass -File scripts/test-build.ps1"
   },
   "devDependencies": {
     "vite": "^5.0.0"

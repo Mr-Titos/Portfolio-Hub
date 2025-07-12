@@ -1,4 +1,4 @@
-const colors = ['#ff073a', '#39ff14', '#00ffff', '#9d00ff', '#ffff00'];
+const colors = ['#ff073a', '#1900ffff', '#00ffff', '#9d00ff', '#ffff00'];
 let colorIndex = 0;
 
 function animateDivider() {
