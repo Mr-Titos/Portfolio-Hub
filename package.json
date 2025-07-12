@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-hub",
+  "version": "1.0.0",
+  "description": "Portfolio statique animé avec anime.js et Vite",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

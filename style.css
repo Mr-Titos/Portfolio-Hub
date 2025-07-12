@@ -1,0 +1,185 @@
+/* =============================== */
+/* Clickable links (overlay)       */
+/* =============================== */
+.side-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    text-decoration: none;
+}
+.side-link .side-header {
+    pointer-events: none;
+}
+
+/* =============================== */
+/* Header styles (titles)          */
+/* =============================== */
+.side-header {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+    text-shadow: 0 2px 8px #000, 0 0 2px #222;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+.side-header h1 {
+    margin: 0 0 8px 0;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.side-header p {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.85;
+}
+.side-header-left h1 {
+    font-size: 2.7rem;
+}
+.side-header-left p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.side-header-right h1 {
+    font-size: 2.3rem;
+    margin-bottom: 16px;
+    margin-top: 11px;
+}
+.side-header-right p {
+    font-size: 0.84rem;
+    line-height: 1.8;
+}
+.side.right .side-header {
+    font-family: 'Press Start 2P', monospace;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.side.left .side-header {
+    font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* =============================== */
+/* Main layout                     */
+/* =============================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #181818;
+}
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* =============================== */
+/* Side sections (left/right)      */
+/* =============================== */
+.side {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+}
+.left {
+    background: #181818;
+    overflow: hidden;
+}
+.left::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('assets/portfolio-pro.png') center center/cover no-repeat;
+    filter: blur(6px);
+    transition: filter 0.5s;
+    z-index: 0;
+}
+.left:hover::before {
+    filter: blur(0px);
+}
+.right {
+    background: #181818;
+    overflow: hidden;
+}
+.right::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('assets/portfolio-game.png') center center/cover no-repeat;
+    filter: blur(6px);
+    transition: filter 0.5s;
+    z-index: 0;
+}
+.right:hover::before {
+    filter: blur(0px);
+}
+
+/* =============================== */
+/* Central divider                 */
+/* =============================== */
+.divider {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+}
+.animated-line {
+    width: 8px;
+    height: 80vh;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 20px #fff, 0 0 40px #ff512f;
+    position: relative;
+}
+
+/* =============================== */
+/* Responsive (mobile/tablet)      */
+/* =============================== */
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+  .side {
+    height: 40vh;
+    min-height: 200px;
+    width: 100vw;
+  }
+  .divider {
+    width: 100vw;
+    height: 60px;
+    min-height: 40px;
+  }
+  .animated-line {
+    width: 80vw;
+    height: 8px;
+  }
+  .side-header {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+  .side-header h1 {
+    font-size: 1.2rem;
+  }
+  .side-header p {
+    font-size: 0.7rem;
+  }
+}
