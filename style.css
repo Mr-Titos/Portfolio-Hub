@@ -125,7 +125,7 @@ body {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: url('assets/portfolio-pro.png') center center/cover no-repeat;
+    background: url('public/assets/portfolio-pro.png') center center/cover no-repeat;
     filter: blur(6px);
     transition: filter 0.5s;
     z-index: 0;
@@ -141,7 +141,7 @@ body {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: url('assets/portfolio-game.png') center center/cover no-repeat;
+    background: url('public/assets/portfolio-game.png') center center/cover no-repeat;
     filter: blur(6px);
     transition: filter 0.5s;
     z-index: 0;
